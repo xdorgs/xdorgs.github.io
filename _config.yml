@@ -61,5 +61,8 @@ gitalk:
   repo: # Repository name
   owner: # GitHub ID
   admin: # GitHub ID
-
-theme: jekyll-theme-midnight
+  
+ deploy:
+  type: git
+  repository: git@github.com:xdorgs/xdorgs.github.io.git
+  branch: master
