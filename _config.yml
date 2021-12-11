@@ -6,17 +6,17 @@
 title: 秋过冬漫长
 subtitle: 没有比脚更长的路，走过去，前面是个天！
 description: 轩哥的个人博客，XDORG's blog.
-keywords: 技术博客, C++, Go, 
+keywords: 技术博客, C++, Go, ceph
 author: 轩哥(XDORG)
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-#url: http://chaooo.github.io
-url: https://xdorgs.github.io/
+url: http://xdorgs.github.io
 root: /
-permalink: :year/:month/:day/:title.html
+# permalink: :year/:month/:day/:title.html
+permalink: article/:year:month:day.html
 permalink_defaults:
 
 # Directory
@@ -48,7 +48,24 @@ highlight:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  Java教程: java-learn
+  Hexo博客折腾: hexo
+  Java知识梳理: java
+  安全认证: safe
+  工具: tool
+  数据库: db
+  杂谈: other
+  环境配置: env
+  并发编程: concurrent
 tag_map:
+  工具: tool
+  后端开发: back-end
+  安全认证: ssafe
+  开源: open-source
+  数据库: db
+  杂谈: other
+  环境配置: env
+  并发编程: concurrent
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -61,13 +78,19 @@ time_format: HH:mm:ss
 ## Set per_page to 0 to disable pagination
 pagination_dir: page
 index_generator:
-  per_page: 6
+  per_page: 10
+  order_by:
+    top: -1
+    date: -1
 archive_generator:
   per_page: 0
   yearly: true
   monthly: true
 tag_generator:
   per_page: 0
+category_generator:
+  per_page: 0
+
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -101,9 +124,8 @@ jsonContent:
 ## Docs: https://hexo.io/docs/deployment.html
 
 
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repository: https://github.com/xdorgs/xdorgs.github.io.git
+  repo: https://github.com/xdorgs/xdorgs.github.io.git
   branch: master
+

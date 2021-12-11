@@ -1,2 +1,0 @@
-# chaooo.github.io
-Blog

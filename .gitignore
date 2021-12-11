@@ -1,8 +1,0 @@
-.DS_Store
-node_modules/
-dist/
-public/
-themes/
-.deploy_git/
-npm-debug.log
-yarn-error.log

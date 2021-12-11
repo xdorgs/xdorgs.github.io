@@ -6,7 +6,7 @@
 version: 2.0.4
 
 # Theme tone
-dark: false #true/false
+dark: true #true/false
 
 # Header
 menu:
@@ -72,7 +72,7 @@ local_search: true ## Use a javascript-based local search engine, true/false.
 #Copyright
 copyright: 
   enable: true #display article copyright information, true/false.
-  describe: 转载请注明出处(保留作者署名及原文链接) #copyright description
+  describe: 转载请注明出处(必须保留作者署名及原文链接) #copyright description
   
 
 # MathJax Support
@@ -89,10 +89,10 @@ comment:
   uyan: #2087549 ## 友言(uid)
   cloudTie: #26c1e8000f5942b49672ee31d4ff5d60 ## 网易云跟帖(productKey)
   changyan: ## 畅言需在下方配置两个参数，此处不填。
-    appid: cysWjX5sV ## 畅言(appid)
-    appkey: prod_dd36514c5a2349e882e4bdca9498a8e6 ##畅言(appkey)
+    appid: ## cysWjX5sV ## 畅言(appid)
+    appkey: ## prod_dd36514c5a2349e882e4bdca9498a8e6 ##畅言(appkey)
   gitalk:
-    enable: false ## If you want to use Gitment comment system please set the value to true.
+    enable: true ## If you want to use Gitment comment system please set the value to true.
     owner: chaooo ## Your GitHub ID, e.g. username
     repo: BlogComments ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
     client_id: dd644e0a840b03bbb238 ## GitHub client ID, e.g. 75752dafe7907a897619
