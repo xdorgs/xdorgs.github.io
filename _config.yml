@@ -1,68 +1,109 @@
-# Menu
-menu:
-  Home: /
-  Archives: /archives/
-  Gallery: /gallery/
-  About: /about/
-rss: /atom.xml
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
 
+# Site
+title: 秋过冬漫长
+subtitle: 没有比脚更长的路，走过去，前面是个天！
+description: 轩哥的个人博客，XDORG's blog.
+keywords: 技术博客, C++, Go, 
+author: 轩哥(XDORG)
+language: zh-CN
+timezone:
 
-# Miscellaneous
-favicon: /favicon.ico
-brand: /images/hexo.png
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+#url: http://chaooo.github.io
+url: https://xdorgs.github.io/
+root: /
+permalink: :year/:month/:day/:title.html
+permalink_defaults:
 
-# technology Video
-# Because I put videos in multiple formats on the same path, I just labeled the path here.
-technology:
-  overlay: true
-  path: /images/technology/
-  brand: /images/hexo-inverted.png
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
 
-# Content
-excerpt_link: Read More...
-share_text: 分享
-nav_text:
-  page_prev: 上一页
-  page_next: 下一页
-  post_prev: 上一篇
-  post_next: 下一篇
-
-# fancybox
-fancybox: true
-
-# RSS
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-  hub:
-  content:
-  content_limit: 140
-  content_limit_delim: ' '
-  order_by: -date
-
-# Local search
-search_text: Search
-# Dependencies: https://github.com/flashlab/hexo-generator-search
-local_search:
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
   enable: true
-  # if auto, trigger search by changing input
-  # if manual, trigger search by pressing enter key or search button
-  trigger: auto
-  # show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
-  unescape: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
 
-# Gitalk
-gitalk:
-  enable: false # true
-  clientID: # GitHub Application Client ID
-  clientSecret: # Client Secret
-  repo: # Repository name
-  owner: # GitHub ID
-  admin: # GitHub ID
-  
- deploy:
-  type: git
-  repository: git@github.com:xdorgs/xdorgs.github.io.git
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+pagination_dir: page
+index_generator:
+  per_page: 6
+archive_generator:
+  per_page: 0
+  yearly: true
+  monthly: true
+tag_generator:
+  per_page: 0
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: BlueLake
+stylus:
+  compress: true
+
+
+# json local search
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+- type: git
+  repository: https://github.com/xdorgs/xdorgs.github.io.git
   branch: master
