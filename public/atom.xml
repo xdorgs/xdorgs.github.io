@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>编程者联盟</title>
+  
+  <subtitle>XDORG</subtitle>
+  <link href="https://xdorgs.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://xdorgs.github.io/"/>
+  <updated>1985-10-26T08:15:00.000Z</updated>
+  <id>https://xdorgs.github.io/</id>
+  
+  <author>
+    <name>XDORG</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://xdorgs.github.io/2021/12/12/hello-world/"/>
+    <id>https://xdorgs.github.io/2021/12/12/hello-world/</id>
+    <published>2021-12-12T02:58:11.674Z</published>
+    <updated>1985-10-26T08:15:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>xdorg</title>
+    <link href="https://xdorgs.github.io/2021/12/12/xdorg/"/>
+    <id>https://xdorgs.github.io/2021/12/12/xdorg/</id>
+    <published>2021-12-12T01:35:41.000Z</published>
+    <updated>2021-12-12T01:35:41.870Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【环境配置】Redis与MySQL多实例配置</title>
+    <link href="https://xdorgs.github.io/2020/02/11/huan-jing-pei-zhi-redis-yu-mysql-duo-shi-li-pei-zhi/"/>
+    <id>https://xdorgs.github.io/2020/02/11/huan-jing-pei-zhi-redis-yu-mysql-duo-shi-li-pei-zhi/</id>
+    <published>2020-02-11T15:08:46.000Z</published>
+    <updated>2021-12-12T02:50:23.373Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近由于工作的需要，需要在同一台服务器上搭建两个&lt;code&gt;Redis&lt;/code&gt;与&lt;code&gt;MySQL&lt;/code&gt;的实例。&lt;br&gt;多实例：就是在一台机器上面开启多个不同的端口(如&lt;code&gt;Redis&lt;/code&gt;用&lt;code&gt;6379&lt;/code&gt;/&lt;code&gt;6380&lt;/code&gt;，&lt;code&gt;MySQL&lt;/code&gt;用&lt;code&gt;3306&lt;/code&gt;/&lt;code&gt;3307&lt;/code&gt;等)，运行多个服务进程；公用一套安装程序，使用不同的配置文件，数据文件。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://xdorgs.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="环境配置" scheme="https://xdorgs.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Redis】基于Redis的分布式锁实现</title>
+    <link href="https://xdorgs.github.io/2019/12/08/redis-ji-yu-redis-de-fen-bu-shi-suo-shi-xian/"/>
+    <id>https://xdorgs.github.io/2019/12/08/redis-ji-yu-redis-de-fen-bu-shi-suo-shi-xian/</id>
+    <published>2019-12-08T08:04:23.000Z</published>
+    <updated>2021-12-12T02:50:23.713Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;SETNX命令简介&quot;&gt;&lt;a href=&quot;#SETNX命令简介&quot; class=&quot;headerlink&quot; title=&quot;SETNX命令简介&quot;&gt;&lt;/a&gt;SETNX命令简介&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SETNX key value&lt;/code&gt;返回(&lt;code&gt;1:key&lt;/code&gt;的值被设置，&lt;code&gt;0:key&lt;/code&gt;的值没被设置)，将&lt;code&gt;key&lt;/code&gt;的值设为&lt;code&gt;value&lt;/code&gt;，并且仅当&lt;code&gt;key&lt;/code&gt;不存在。&lt;/li&gt;
+&lt;li&gt;锁的&lt;code&gt;key&lt;/code&gt;为目标数据的唯一键，&lt;code&gt;value&lt;/code&gt;为锁的期望超时时间点；&lt;/li&gt;
+&lt;li&gt;基于&lt;code&gt;Redis&lt;/code&gt;实现的分布式锁，主要基于&lt;code&gt;redis&lt;/code&gt;的&lt;code&gt;setnx（set if not exist）&lt;/code&gt;命令；</summary>
+    
+    
+    
+    <category term="Redis" scheme="https://xdorgs.github.io/categories/Redis/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Redis" scheme="https://xdorgs.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Redis】Redis穿透、击穿、雪崩和数据一致性</title>
+    <link href="https://xdorgs.github.io/2019/09/27/redis-redis-chuan-tou-ji-chuan-xue-beng-he-shu-ju-yi-zhi-xing/"/>
+    <id>https://xdorgs.github.io/2019/09/27/redis-redis-chuan-tou-ji-chuan-xue-beng-he-shu-ju-yi-zhi-xing/</id>
+    <published>2019-09-27T11:15:31.000Z</published>
+    <updated>2021-12-12T02:50:23.678Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-缓存穿透&quot;&gt;&lt;a href=&quot;#1-缓存穿透&quot; class=&quot;headerlink&quot; title=&quot;1. 缓存穿透&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://xdorgs.github.io/categories/Redis/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Redis" scheme="https://xdorgs.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Redis】深入学习Redis及集群</title>
+    <link href="https://xdorgs.github.io/2019/09/20/redis-shen-ru-xue-xi-redis-ji-ji-qun/"/>
+    <id>https://xdorgs.github.io/2019/09/20/redis-shen-ru-xue-xi-redis-ji-ji-qun/</id>
+    <published>2019-09-20T08:19:26.000Z</published>
+    <updated>2021-12-12T02:50:23.740Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Redis本质上是一个Key-Value类型的&lt;strong&gt;内存数据库&lt;/strong&gt;，整个数据库统统加载在内存当中进行操作，定期通过异步操作把数据库数据flush到硬盘上进行保存。因为是纯内存操作，Redis的性能非常出色，每秒可以处理超过10万次读写操作，是已知性能最快的Key-Value DB。</summary>
+    
+    
+    
+    <category term="Redis" scheme="https://xdorgs.github.io/categories/Redis/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Redis" scheme="https://xdorgs.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据库优化】MySQL事务处理与并发控制</title>
+    <link href="https://xdorgs.github.io/2019/09/07/shu-ju-ku-you-hua-mysql-shi-wu-chu-li-yu-bing-fa-kong-zhi/"/>
+    <id>https://xdorgs.github.io/2019/09/07/shu-ju-ku-you-hua-mysql-shi-wu-chu-li-yu-bing-fa-kong-zhi/</id>
+    <published>2019-09-07T15:31:48.000Z</published>
+    <updated>2021-12-12T02:50:23.577Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-MySQL事务&quot;&gt;&lt;a href=&quot;#1-MySQL事务&quot; class=&quot;headerlink&quot; title=&quot;1. MySQL事务&quot;&gt;&lt;/a&gt;1. MySQL事务&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;事务: 数据库操作的最小工作单元，是作为单个逻辑工作单元执行的一系列操作；事务是一组不可再分割的操作集合(工作逻辑单元)；</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据库优化】MySQL索引的使用及优化</title>
+    <link href="https://xdorgs.github.io/2019/09/05/shu-ju-ku-you-hua-mysql-suo-yin-de-shi-yong-ji-you-hua/"/>
+    <id>https://xdorgs.github.io/2019/09/05/shu-ju-ku-you-hua-mysql-suo-yin-de-shi-yong-ji-you-hua/</id>
+    <published>2019-09-05T09:04:12.000Z</published>
+    <updated>2021-12-12T02:50:23.602Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-索引的基本概念&quot;&gt;&lt;a href=&quot;#1-索引的基本概念&quot; class=&quot;headerlink&quot; title=&quot;1. 索引的基本概念&quot;&gt;&lt;/a&gt;1. 索引的基本概念&lt;/h3&gt;&lt;p&gt;索引是为了加速对表中数据行的检索而创建的一种分散存储的&lt;strong&gt;数据结构&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;索引意义：&lt;ol&gt;
+&lt;li&gt;索引能极大的减少存储引擎需要扫描的数据量&lt;/li&gt;
+&lt;li&gt;索引可以把随机IO变成顺序IO&lt;/li&gt;
+&lt;li&gt;索引可以帮助我们在进行分组、排序等操作时，避免使用临时表</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据库优化】MySQL性能优化基础</title>
+    <link href="https://xdorgs.github.io/2019/09/01/shu-ju-ku-you-hua-mysql-xing-neng-you-hua-ji-chu/"/>
+    <id>https://xdorgs.github.io/2019/09/01/shu-ju-ku-you-hua-mysql-xing-neng-you-hua-ji-chu/</id>
+    <published>2019-09-01T13:36:46.000Z</published>
+    <updated>2021-12-12T02:50:23.626Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-MySQL基础操作&quot;&gt;&lt;a href=&quot;#1-MySQL基础操作&quot; class=&quot;headerlink&quot; title=&quot;1. MySQL基础操作&quot;&gt;&lt;/a&gt;1. MySQL基础操作&lt;/h3&gt;&lt;h4 id=&quot;1-1-MySQL备份与恢复&quot;&gt;&lt;a href=&quot;#1-1-MySQL备份与恢复&quot; class=&quot;headerlink&quot; title=&quot;1.1 MySQL备份与恢复&quot;&gt;&lt;/a&gt;1.1 MySQL备份与恢复&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;备份：在mysql的安装目录的bin目录下有&lt;strong&gt;mysqldump命令&lt;/strong&gt;，可以完成对数据库的备份。 &lt;ul&gt;
+&lt;li&gt;语法：&lt;code&gt;mysqldump -u 用户名 -p 数据库名&amp;gt; 磁盘SQL文件路径&lt;/code&gt;</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据库优化】MySQL慢日志查询分析</title>
+    <link href="https://xdorgs.github.io/2019/08/29/shu-ju-ku-you-hua-mysql-man-ri-zhi-cha-xun-fen-xi/"/>
+    <id>https://xdorgs.github.io/2019/08/29/shu-ju-ku-you-hua-mysql-man-ri-zhi-cha-xun-fen-xi/</id>
+    <published>2019-08-28T16:26:43.000Z</published>
+    <updated>2021-12-12T02:50:23.550Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;同大多数关系型数据库一样，日志文件是MySQL数据库的重要组成部分。MySQL有几种不同的日志文件，通常包括错误日志文件，二进制日志，通用日志，慢查询日志，等等。这些日志可以帮助我们定位mysqld内部发生的事件，数据库性能故障，记录数据的变更历史，用户恢复数据库等等。</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【安全认证】JSON Web Token 入门</title>
+    <link href="https://xdorgs.github.io/2019/08/06/an-quan-ren-zheng-json-web-token-ru-men/"/>
+    <id>https://xdorgs.github.io/2019/08/06/an-quan-ren-zheng-json-web-token-ru-men/</id>
+    <published>2019-08-06T07:50:53.000Z</published>
+    <updated>2021-12-12T02:50:23.301Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;JSON-Web-Token&quot;&gt;&lt;a href=&quot;#JSON-Web-Token&quot; class=&quot;headerlink&quot; title=&quot;JSON Web Token&quot;&gt;&lt;/a&gt;JSON Web Token&lt;/h2&gt;&lt;p&gt;JSON Web Token（缩写 JWT）基于JSON格式信息一种Token令牌，是目前最流行的跨域认证解决方案。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全认证" scheme="https://xdorgs.github.io/categories/%E5%AE%89%E5%85%A8%E8%AE%A4%E8%AF%81/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="安全认证" scheme="https://xdorgs.github.io/tags/%E5%AE%89%E5%85%A8%E8%AE%A4%E8%AF%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【安全认证】MD5算法加盐实现用户密码加密</title>
+    <link href="https://xdorgs.github.io/2019/07/28/an-quan-ren-zheng-md5-suan-fa-jia-yan-shi-xian-yong-hu-mi-ma-jia-mi/"/>
+    <id>https://xdorgs.github.io/2019/07/28/an-quan-ren-zheng-md5-suan-fa-jia-yan-shi-xian-yong-hu-mi-ma-jia-mi/</id>
+    <published>2019-07-28T13:49:28.000Z</published>
+    <updated>2021-12-12T02:50:23.337Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-MD5加密算法介绍&quot;&gt;&lt;a href=&quot;#1-MD5加密算法介绍&quot; class=&quot;headerlink&quot; title=&quot;1. MD5加密算法介绍&quot;&gt;&lt;/a&gt;1. MD5加密算法介绍&lt;/h3&gt;&lt;p&gt;MD5的全称是Message-Digest Algorithm 5（信息-摘要算法 第五版），经MD2、MD3和MD4发展而来的一种加密算法，是典型的消息摘要算法，属Hash算法一类。作用是让大容量信息在用数字签名软件签署私人密匙前被”压缩”成一种保密的格式（就是把一个任意长度的字节串变换成一定长的大整数）。通过MD5算法进行加密获得一个随机长度的信息并产生一个128位的信息摘要。如果将这个128位的二进制摘要信息换算成十六进制，可以得到一个32位的字符串，因此我们加密完成后的16进制的字符串长度为32位。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全认证" scheme="https://xdorgs.github.io/categories/%E5%AE%89%E5%85%A8%E8%AE%A4%E8%AF%81/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="安全认证" scheme="https://xdorgs.github.io/tags/%E5%AE%89%E5%85%A8%E8%AE%A4%E8%AF%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据库】嵌入式SQL语言</title>
+    <link href="https://xdorgs.github.io/2019/07/16/shu-ju-ku-qian-ru-shi-sql-yu-yan/"/>
+    <id>https://xdorgs.github.io/2019/07/16/shu-ju-ku-qian-ru-shi-sql-yu-yan/</id>
+    <published>2019-07-16T06:32:28.000Z</published>
+    <updated>2021-12-12T02:50:23.464Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;交互式SQL语言有很多优点：记录集合操作、非过程性操作、一条语句就可实现复杂查询的结果，&lt;/li&gt;
+&lt;li&gt;然而，交互式SQL本身也有很多局限：</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据库】数据库语言SQL</title>
+    <link href="https://xdorgs.github.io/2019/07/01/shu-ju-ku-shu-ju-ku-yu-yan-sql/"/>
+    <id>https://xdorgs.github.io/2019/07/01/shu-ju-ku-shu-ju-ku-yu-yan-sql/</id>
+    <published>2019-07-01T11:36:31.000Z</published>
+    <updated>2021-12-12T02:50:23.521Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;SQL语言概述&quot;&gt;&lt;a href=&quot;#SQL语言概述&quot; class=&quot;headerlink&quot; title=&quot;SQL语言概述&quot;&gt;&lt;/a&gt;SQL语言概述&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;结构化查询语言&lt;/strong&gt;(Structured Query Language)简称SQL，是一种特殊目的的编程语言，是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL语言是集DDL、DML和DCL于一体的数据库语言</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据库】数据库系统基础</title>
+    <link href="https://xdorgs.github.io/2019/06/22/shu-ju-ku-shu-ju-ku-xi-tong-ji-chu/"/>
+    <id>https://xdorgs.github.io/2019/06/22/shu-ju-ku-shu-ju-ku-xi-tong-ji-chu/</id>
+    <published>2019-06-22T12:20:19.000Z</published>
+    <updated>2021-12-12T02:50:23.494Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;数据库 是 电子化信息的集合&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;将信息规范化并使之电子化，形成电子信息’库’，以便利用计算机对这些信息进行快速有效的存储、检索、统计与管理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;表(Table)：以按行按列形式组织及展现的数据</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="后端开发" scheme="https://xdorgs.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【杂谈】对开源的理解</title>
+    <link href="https://xdorgs.github.io/2019/04/11/za-tan-dui-kai-yuan-de-li-jie/"/>
+    <id>https://xdorgs.github.io/2019/04/11/za-tan-dui-kai-yuan-de-li-jie/</id>
+    <published>2019-04-11T12:13:15.000Z</published>
+    <updated>2021-12-12T02:50:23.651Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;什么是开源&quot;&gt;&lt;a href=&quot;#什么是开源&quot; class=&quot;headerlink&quot; title=&quot;什么是开源&quot;&gt;&lt;/a&gt;什么是开源&lt;/h3&gt;&lt;p&gt;所谓的「开源」，原本指的是开放其设计让所有使用者自由修改的一项机制。&lt;/p&gt;
+&lt;p&gt;在IT领域来说的话，字面意思就是&lt;strong&gt;开放源代码&lt;/strong&gt;，开源软件的源代码任何人都可以审查、修改和增强。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://xdorgs.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="杂谈" scheme="https://xdorgs.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="开源" scheme="https://xdorgs.github.io/tags/%E5%BC%80%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【环境配置】Win10下配置Nginx+PHP-7+MySQL-5.6</title>
+    <link href="https://xdorgs.github.io/2018/10/22/huan-jing-pei-zhi-win10-xia-pei-zhi-nginx-php7-mysql-5-6/"/>
+    <id>https://xdorgs.github.io/2018/10/22/huan-jing-pei-zhi-win10-xia-pei-zhi-nginx-php7-mysql-5-6/</id>
+    <published>2018-10-22T03:39:12.000Z</published>
+    <updated>2021-12-12T02:50:23.401Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-软件下载&quot;&gt;&lt;a href=&quot;#1-软件下载&quot; class=&quot;headerlink&quot; title=&quot;1. 软件下载&quot;&gt;&lt;/a&gt;1. 软件下载&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Windows操作系统。&lt;/li&gt;
+&lt;li&gt;Nginx，下载地址：&lt;a href=&quot;http://nginx.org/en/download.html&quot;&gt;http://nginx.org/en/download.html&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;PHP，下载地址：&lt;a href=&quot;http://php.net/downloads.php&quot;&gt;http://php.net/downloads.php&lt;/a&gt;（nginx下php是以FastCGI的方式运行，所以我们下载非线程安全也就是nts的php包）。&lt;/li&gt;
+&lt;li&gt;MySQL，下载地址：&lt;a href=&quot;https://www.mysql.com/downloads/&quot;&gt;https://www.mysql.com/downloads/&lt;/a&gt;。（选择社区版&lt;code&gt;Community&lt;/code&gt;-&amp;gt;&lt;code&gt;MySQL Community Server&lt;/code&gt;-&amp;gt;&lt;code&gt;MySQL Community Server 5.6&lt;/code&gt;，根据Windows系统选择对应zip包）。</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://xdorgs.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="环境配置" scheme="https://xdorgs.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据库】MongoDB学习笔记</title>
+    <link href="https://xdorgs.github.io/2016/07/30/shu-ju-ku-mongodb-xue-xi-bi-ji/"/>
+    <id>https://xdorgs.github.io/2016/07/30/shu-ju-ku-mongodb-xue-xi-bi-ji/</id>
+    <published>2016-07-30T10:20:16.000Z</published>
+    <updated>2021-12-12T02:50:23.432Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;part1-安装配置&quot;&gt;&lt;a href=&quot;#part1-安装配置&quot; class=&quot;headerlink&quot; title=&quot;part1 安装配置&quot;&gt;&lt;/a&gt;part1 安装配置&lt;/h2&gt;&lt;h3 id=&quot;一、安装：&quot;&gt;&lt;a href=&quot;#一、安装：&quot; class=&quot;headerlink&quot; title=&quot;一、安装：&quot;&gt;&lt;/a&gt;一、安装：&lt;/h3&gt;&lt;p&gt;在mongodb官网下载对应自己电脑系统的安装包，地址为： &lt;a href=&quot;http://www.mongodb.org/downloads&quot;&gt;http://www.mongodb.org/downloads&lt;/a&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="数据库" scheme="https://xdorgs.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="mongodb" scheme="https://xdorgs.github.io/tags/mongodb/"/>
+    
+  </entry>
+  
+</feed>

@@ -16,34 +16,32 @@ menu:
   About:
     url: /about
     icon: fas fa-user-circle
-  Contact:
-    url: /contact
-    icon: fas fa-comments
+  #Contact:
+  #  url: /contact
+  #  icon: fas fa-comments
   Friends:
     url: /friends
     icon: fas fa-address-book
+    
   # 二级菜单写法如下
-  #Medias:
-  #  icon: fas fa-list
-  #  children:
-  #    - name: Musics
-  #      url: /musics
-  #      icon: fas fa-music
-  #    - name: Movies
-  #      url: /movies
-  #      icon: fas fa-film
-  #    - name: Books
-  #      url: /books
-  #      icon: fas fa-book
-  #    - name: Galleries
-  #      url: /galleries
-  #      icon: fas fa-image
+  Medias:
+    icon: fas fa-list
+    children:
+      - name: Musics
+        url: /musics
+        icon: fas fa-music
+      - name: Movies
+        url: /movies
+        icon: fas fa-film
+      - name: Books
+        url: /books
+        icon: fas fa-book
 
 # Website start time.
 # 站点运行开始时间.
 time:
   enable: false
-  year: 2019 # 年份
+  year: 2020 # 年份
   month: 06 # 月份
   date: 28 # 日期
   hour: 00 # 小时
@@ -79,7 +77,7 @@ music:
   autoHide: true    # hide automaticaly
   server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
   type: playlist    #require song, playlist, album, search, artist
-  id: 503838841     #require	song id / playlist id / album id / search keyword
+  id: 247491     #require	song id / playlist id / album id / search keyword
   fixed: true       # 开启吸底模式
   autoplay: false   # 是否自动播放
   theme: '#42b983'
@@ -126,19 +124,19 @@ indexbtn:
   enable: true
   name: Github
   icon: fab fa-github-alt
-  url: https://github.com/blinkfox/hexo-theme-matery
+  url: https://github.com/xdorgs
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github:  https://github.com/blinkfox
-  email: 1181062873@qq.com
+  github:  https://github.com/xdorgs
+  email: ceph_xdorg@163.com
   facebook: # https://www.facebook.com/xxx
   twitter: # https://twitter.com/xxx
-  qq: 1181062873
+  qq: # 1181062873
   weibo: # https://weibo.com/xxx
-  zhihu: # https://www.zhihu.com/xxx
+  zhihu: https://www.zhihu.com/people/xuan-xuan-79-44-99
   rss: true # true、false
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
@@ -169,7 +167,7 @@ reward:
 # minCharNumber: Approve copyright information by copying at least how many characters.
 # 是否激活复制文章时追加博客和作者的版权信息.
 copyright:
-  enable: false
+  enable: true
   minCharNumber: 120 # 至少复制多少个字符就追加版权信息.
   description: 本文章著作权归作者所有，任何形式的转载都请注明出处。
 
@@ -527,7 +525,7 @@ tuxiaochao:
   productId:
 #背景canvas-nest
 canvas_nest:
-  enable: false
+  enable: true
   color: 0,0,255 # 线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
   pointColor: 0,0,255 # 交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
   opacity: 0.7 # 线条透明度（0~1）, 默认: 0.5
@@ -540,11 +538,11 @@ ribbon:
   size: 150 # 彩带大小, 默认: 90.
   alpha: 0.6 # 彩带透明度 (0 ~ 1), 默认: 0.6.
   zIndex: -1 # 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1.
-  clickChange: false  # 设置是否每次点击都更换彩带.
+  clickChange: true  # 设置是否每次点击都更换彩带.
 
 # 背景动态彩带.
 ribbon_dynamic:
-  enable: false
+  enable: true
 
 # sharejs文章分享模块.
 # 支持顺序，可选项目为twitter, facebook, google, qq, qzone, wechat, weibo, douban, linkedin.
@@ -585,9 +583,9 @@ banner:
 
 #ICP备案信息尾部显示
 icp:
-  enable: false
-  url: # 备案链接
-  text: # 备案信息
+  enable: true
+  url: http://beian.miit.gov.cn/
+  text: 皖ICP备2021009792号
 
 # CDN访问加速 
 # 第一次使用本功能，一定要先配置url，再`hexo cl && hexo g && hexo d`部署到GitHub的仓库，注意！必须是GitHub的仓库！
@@ -603,7 +601,7 @@ jsDelivr:
   
 # 网站背景图
 background:
-  enable: false
+  enable: true
   url: "https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg"
 
 # 说说 https://artitalk.js.org/
