@@ -1,0 +1,1931 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="【数据库】数据库系统基础, 编程者联盟">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>【数据库】数据库系统基础 | 编程者联盟</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="编程者联盟" type="application/atom+xml">
+</head>
+
+
+
+   <style>
+    body{
+       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">编程者联盟</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">编程者联盟</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">【数据库】数据库系统基础</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">后端开发</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                <span class="chip bg-color">数据库</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                数据库
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-06-22
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
+<li>数据库 是 电子化信息的集合</li>
+</ol>
+<ul>
+<li>将信息规范化并使之电子化，形成电子信息’库’，以便利用计算机对这些信息进行快速有效的存储、检索、统计与管理。</li>
+</ul>
+<ol start="2">
+<li>表(Table)：以按行按列形式组织及展现的数据<span id="more"></span></li>
+</ol>
+<ul>
+<li>数据库起源于规范化“表(Table)”的处理，Table中描述了一批相互有关联关系的数据–&gt;关系</li>
+</ul>
+<ol start="3">
+<li>数据库系统的构成（概念层次）:</li>
+<li>数据库(DB):Database：相互之间有关联关系的数据的集合</li>
+<li>数据库管理系统(DBMS):Database Management System</li>
+<li>数据库应用(DBAP):Database Application</li>
+<li>数据库管理员(DBA):Database Asministrator</li>
+<li>计算机基本系统</li>
+</ol>
+<h4 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h4><ol>
+<li><a href="#id1">数据库管理系统(DBMS)</a></li>
+<li><a href="#id2">数据库系统的标准结构</a></li>
+<li><a href="#id3">三级模式两层映像</a></li>
+<li><a href="#id4">数据模型</a></li>
+<li><a href="#id5">关系模型</a></li>
+<li><a href="#id6">关系模型中的完整性</a></li>
+<li><a href="#id7">关系代数</a></li>
+<li><a href="#id8">关系演算</a></li>
+</ol>
+<p><span id="id1"><span></p>
+<h3 id="1-数据库管理系统-DBMS"><a href="#1-数据库管理系统-DBMS" class="headerlink" title="1. 数据库管理系统(DBMS)"></a>1. 数据库管理系统(DBMS)</h3><h4 id="1-1-从用户角度看DBMS-数据库管理系统"><a href="#1-1-从用户角度看DBMS-数据库管理系统" class="headerlink" title="1.1 从用户角度看DBMS(数据库管理系统)"></a>1.1 从用户角度看DBMS(数据库管理系统)</h4><ol>
+<li>数据库定义：定义数据库中的Table的表名、标题(属性以及属性值的要求)等</li>
+</ol>
+<ul>
+<li>DBMS提供了一套<strong>数据定义语言(DDL</strong>: Data Definition Language)给用户</li>
+<li>用户使用DDL描述其所要建立的表的格式</li>
+<li>DBMS依照用户的定义，创建数据库及其中的表</li>
+</ul>
+<ol start="2">
+<li>数据库操作：向数据库的Table中增加/删除/更新数据及对数据进行查询、检索、统计等</li>
+</ol>
+<ul>
+<li>DBMS提供了一套<strong>数据库操纵语言(DML</strong>: Data Manipulation Language)给用户</li>
+<li>用户使用DML描述其所要进行的增、删、改、查等操作</li>
+<li>DBMS依照用户的操作描述，实际执行这些操作</li>
+</ul>
+<ol start="3">
+<li>数据库控制：控制数据库中数据的使用(哪些用户可以使用，哪些不可以)</li>
+</ol>
+<ul>
+<li>DBMS提供了一套<strong>数据控制语言(DCL</strong>: Data Control Language)给用户</li>
+<li>用户使用DCL描述其对数据库所要实施的控制</li>
+<li>DBMS依照用户描述，实际ijnx控制</li>
+</ul>
+<ol start="4">
+<li>数据库维护：转储/恢复/重组/性能监测/分析…</li>
+</ol>
+<ul>
+<li>DBMS提供了一系列程序(实用程序/例行程序)给用户</li>
+<li>在这些程序中提供了对数据库维护的各种功能</li>
+<li>用户使用这些程序进行各种数据库维护操作</li>
+<li>(数据库维护的实用程序，一般由数据库管理员(DBA)来使用和掌握的)</li>
+</ul>
+<h4 id="1-2-数据库语言"><a href="#1-2-数据库语言" class="headerlink" title="1.2 数据库语言"></a>1.2 数据库语言</h4><ul>
+<li>使用者使用数据库语言，利用DBMS操纵数据库</li>
+<li>SQL语言：结构化的数据库语言</li>
+<li>高级语言：一条数据库语言相当于高级语言的一个或多个循环程序，数据库语言可以嵌入到高级语言(宿主语言)中使用</li>
+</ul>
+<h4 id="1-3-从系统实现角度看DBMS的功能"><a href="#1-3-从系统实现角度看DBMS的功能" class="headerlink" title="1.3 从系统实现角度看DBMS的功能"></a>1.3 从系统实现角度看DBMS的功能</h4><ol>
+<li>数据库管理系统的实现：形式 –&gt; 构造 –&gt; 自动化</li>
+<li>DBMS为完成DB管理，在后台运行着一系列程序…</li>
+</ol>
+<ul>
+<li><strong>语言编译器</strong>：将数据库语言书写的内容，翻译成BDMS可执行的命令。例如：DDL编译器，DML编译器，DCL编译器等</li>
+<li><strong>查询优化</strong>(执行引擎)与<strong>查询实现</strong>(基本命令的不同执行算法)：提高数据库检索速度的手段。例如贯穿于数据存取各个阶段的优化程序</li>
+<li><strong>数据存取与索引</strong>：提供数据在磁盘/磁带等上的搞笑存取手段。例如：存储管理器，缓冲区管理器，索引/文件和记录管理器等</li>
+<li><strong>通信控制</strong>：提供网络环境下数据库操作与数据传输的手段</li>
+<li><strong>事务管理</strong>：提供提高可靠性并避免并发操作错误的手段</li>
+<li><strong>故障恢复</strong>：使用数据库自动恢复到故障发生前正确状态的手段。例如备份、运行日志操控等实用程序</li>
+<li><strong>安全性控制</strong>：提供合法性检验，避免非授权非法用户访问数据库的手段</li>
+<li><strong>完整性控制</strong>：提供数据及数据操作正确性检查的手段</li>
+<li><strong>数据字典管理</strong>：管理用户已经定义的信息</li>
+<li>**应用程序接口(API)**：提供应用程序使用DBMS特定功能的二首段</li>
+<li><strong>数据库数据装载、重组等实用程序</strong></li>
+<li><strong>数据库性能分析</strong>：统计在运行过程中数据库的各种性能数据，便于优化运行</li>
+</ul>
+<blockquote>
+<p>典型的数据库管理系统(DBMS)：Oracle、DB2(IBM)、Sybase、Microsoft SQL Server、Microsoft Access、PostgreSQL </p>
+</blockquote>
+<p><span id="id2"><span></p>
+<h3 id="2-数据库系统的标准结构"><a href="#2-数据库系统的标准结构" class="headerlink" title="2. 数据库系统的标准结构"></a>2. 数据库系统的标准结构</h3><p>DBMS管理数据的三个层次：</p>
+<ol>
+<li>External Level = User Level（外部级别 = 用户级别）</li>
+</ol>
+<ul>
+<li>某一用户能够看到与处理的数据,   全局数据中的某一部分</li>
+</ul>
+<ol start="2">
+<li>Conceptual Level = Logic level（概念级别 = 逻辑级别）</li>
+</ol>
+<ul>
+<li>从全局角度理解/管理的数据, 含相应的关联约束</li>
+</ul>
+<ol start="3">
+<li>Internal Level = Physical level（内部级别 = 物理级别）</li>
+</ol>
+<ul>
+<li>存储在介质上的数据，含存储路径、存储方式 、索引方式等</li>
+</ul>
+<p><span id="id3"><span></p>
+<h3 id="3-三级模式两层映像"><a href="#3-三级模式两层映像" class="headerlink" title="3. 三级模式两层映像"></a>3. 三级模式两层映像</h3><p>数据库的三级模式结构是指：数据库系统是由外模式、模式(概念模式)和内模式三级构成</p>
+<ul>
+<li>应用–&gt; 外模式(多个) –&gt; 模式(一个) –&gt; 内模式(一个) –&gt; 数据库</li>
+</ul>
+<h4 id="3-1-数据-视图-与模式-数据的结构"><a href="#3-1-数据-视图-与模式-数据的结构" class="headerlink" title="3.1 数据(视图)与模式(数据的结构)"></a>3.1 数据(视图)与模式(数据的结构)</h4><ul>
+<li>模式(Schema):对数据库中数据所进行的一种结构性的描述，所观察到数据的结构信息</li>
+<li>视图(View)/数据(Data)：某一种表现形式下表现出来的数据库中的数据</li>
+</ul>
+<h4 id="3-2-三级模式-三级视图"><a href="#3-2-三级模式-三级视图" class="headerlink" title="3.2 三级模式(三级视图)"></a>3.2 三级模式(三级视图)</h4><ol>
+<li>External Schema —-(External) View</li>
+</ol>
+<ul>
+<li>外模式：某一用户能够看到与处理的数据的结构描述</li>
+</ul>
+<ol start="2">
+<li>(Conceptual) Schema —- Conceptual View</li>
+</ol>
+<ul>
+<li>模式(概念模式)：从全局角度理解/管理的数据的结构描述, 含相应的关联约束</li>
+<li>体现在数据之间的内在本质联系</li>
+</ul>
+<ol start="3">
+<li>Internal Schema —- Internal  View</li>
+</ol>
+<ul>
+<li>内模式：存储在介质上的数据的结构描述，含存储路径、存储方式 、索引方式等</li>
+</ul>
+<h4 id="3-3-两层映像"><a href="#3-3-两层映像" class="headerlink" title="3.3 两层映像"></a>3.3 两层映像</h4><ol>
+<li>E-C Mapping：External Schema-Conceptual Schema Mapping </li>
+</ol>
+<ul>
+<li>将外模式映射为概念模式，从而支持实现数据概念视图向外部视图的转换</li>
+<li>便于用户观察和使用</li>
+</ul>
+<ol start="2">
+<li>C-I Mapping：Conceptual Schema-Internal Schema Mapping </li>
+</ol>
+<ul>
+<li>将概念模式映射为内模式，从而支持实现数据概念视图向内部视图的转换</li>
+<li>便于计算机进行存储和处理</li>
+</ul>
+<h4 id="3-4-标准结构的两个独立性"><a href="#3-4-标准结构的两个独立性" class="headerlink" title="3.4 标准结构的两个独立性"></a>3.4 标准结构的两个独立性</h4><ol>
+<li>逻辑数据独立性</li>
+</ol>
+<ul>
+<li>当概念模式变化时，可以不改变外部模式(只需改变E-C Mapping)，从而无需改变应用程序</li>
+</ul>
+<ol start="2">
+<li>物理数据独立性</li>
+</ol>
+<ul>
+<li>当内部模式变化时，可以不改变概念模式(只需改变C-I Mapping) ，从而不改变外部模式</li>
+</ul>
+<p><span id="id4"><span></p>
+<h3 id="4-数据模型"><a href="#4-数据模型" class="headerlink" title="4. 数据模型"></a>4. 数据模型</h3><ol>
+<li>数据模型：模式 与 模式的结构</li>
+</ol>
+<ul>
+<li>规定模式统一描述方式的模型，包括：数据结构、操作和约束</li>
+<li>数据模型是对模式本身结构的抽象，模式是对数据本身结构形式的抽象</li>
+<li>比如：关系模型：所有模式都可为抽象表(Table)的形式[<strong>数据结构</strong>]，而每一个具体的模式都是拥有不同列名的具体的表。对这种表形式的数据有哪些[<strong>操作</strong>]和[<strong>约束</strong>]</li>
+</ul>
+<ol start="2">
+<li>三大经典数据模型</li>
+</ol>
+<ul>
+<li>关系模型：<strong>表</strong>的形式组织数据</li>
+<li>层次模型：<strong>树</strong>的形式组织数据</li>
+<li>网状模型：<strong>图</strong>的形式组织数据</li>
+</ul>
+<p><span id="id5"><span></p>
+<h3 id="5-关系模型"><a href="#5-关系模型" class="headerlink" title="5. 关系模型"></a>5. 关系模型</h3><ol>
+<li>形象地说，<strong>一个关系(relation)就是一个Table</strong>，关系模型就是处理Table的，它由三个部分组成：</li>
+</ol>
+<ul>
+<li>描述DB各种数据的基本结构形式(Table/Relation)</li>
+<li>描述Table与Table之间所可能发生的各种操作(关系运算)</li>
+<li>描述这些操作所应遵循的约束条件(完整性约束)</li>
+</ul>
+<ol start="2">
+<li>关系模型的三个要素：</li>
+</ol>
+<ul>
+<li>基本结构：Relation/Table</li>
+<li>基本操作：Relation Operator<ul>
+<li>基本的:(并, UNION)、(差, DIFFERENCE)、(广义积,PRODUCT)、(选择, SELECTION)、(投影, PROJECTION)。</li>
+<li>扩展的:(交, INTERSECTION)、(连接, JOIN)、(除, DIVISION)运算</li>
+</ul>
+</li>
+<li>完整性约束：实体完整性、参照完整性和用户自定义的完整性</li>
+</ul>
+<ol start="3">
+<li>表(Table)的基本构成要素</li>
+</ol>
+<ul>
+<li>列/字段/属性/数据项：列名，列值</li>
+<li>行/元组/记录</li>
+<li>标题/模式</li>
+</ul>
+<h4 id="5-1-“表”的严格定义"><a href="#5-1-“表”的严格定义" class="headerlink" title="5.1 “表”的严格定义"></a>5.1 “表”的严格定义</h4><ul>
+<li>域(Domain)：“列”的取值范围，一组值的集合，这组值具有相同的数据类型</li>
+<li>笛卡尔积(Cartesian Product)：“元组”及所有可能组合成的元组</li>
+<li>关系(Relation)：一组域D1,D2,…,Dn的笛卡尔积的子集，笛卡尔积中具有某一方面意义的那些元组被称作一个关系(Relation)</li>
+</ul>
+<h4 id="5-2-关系模式与关系"><a href="#5-2-关系模式与关系" class="headerlink" title="5.2 关系模式与关系"></a>5.2 关系模式与关系</h4><ul>
+<li>同一关系模式下，可有很多的关系</li>
+<li>关系模式是关系的结构, 关系是关系模式在某一时刻的数据</li>
+<li>关系模式是稳定的；而关系是某一时刻的值，是随时间可能变化的</li>
+</ul>
+<h4 id="5-3-关系的特性"><a href="#5-3-关系的特性" class="headerlink" title="5.3 关系的特性"></a>5.3 关系的特性</h4><ul>
+<li>列是同质：即每一列中的分量来自同一域，是同一类型的数据</li>
+<li>不同的列可来自同一个域，称其中的每一列为一个属性，不同的属性要给予不同的属性名。</li>
+<li>列位置互换性：区分哪一列是靠列名</li>
+<li>行位置互换性：区分哪一行是靠某一或某几列的值(关键字/键字/码字)</li>
+<li>关系是以内容(名字或值)来区分的，而不是属性在关系的位置来区分</li>
+<li>理论上，关系的任意两个元组不能完全相同。(集合的要求：集合内不能有相同的两个元素)；现实应用中，表(Table)可能并不完全遵守此特性。元组相同是指两个元组的每个分量(列值)都相同。</li>
+<li>属性不可再分特性:又被称为关系第一范式</li>
+</ul>
+<h4 id="5-4-关系的一些重要概念"><a href="#5-4-关系的一些重要概念" class="headerlink" title="5.4 关系的一些重要概念"></a>5.4 关系的一些重要概念</h4><ol>
+<li>候选码(Candidate Key)/候选键</li>
+</ol>
+<ul>
+<li>关系中的一个属性组，其值能唯一标识一个元组，若从该属性组中去掉<br>任何一个属性，它就不具有这一性质了，这样的属性组称作候选码。</li>
+</ul>
+<ol start="2">
+<li>主码(Primary Key)/主键</li>
+</ol>
+<ul>
+<li>当有多个候选码时，可以选定一个作为主码。DBMS以主码为主要线索管理关系中的各个元组</li>
+</ul>
+<ol start="3">
+<li>主属性与非主属性</li>
+</ol>
+<ul>
+<li>包含在任何一个候选码中的属性被称作主属性，而其他属性被称作非主属性</li>
+<li>最简单的，候选码只包含一个属性；</li>
+<li>极端的，所有属性构成这个关系的候选码，称为全码(All-Key)</li>
+</ul>
+<ol start="4">
+<li>外码(Foreign Key)/外键</li>
+</ol>
+<ul>
+<li>关系R中的一个属性组，它不是R的候选码，但它与另一个关系S的候选码相对应，则称这个属性组为R的外码或外键。</li>
+<li>两个关系通常是靠外码连接起来的。</li>
+</ul>
+<p><span id="id6"><span></p>
+<h3 id="6-关系模型中的完整性"><a href="#6-关系模型中的完整性" class="headerlink" title="6. 关系模型中的完整性"></a>6. 关系模型中的完整性</h3><h4 id="6-1-实体完整性"><a href="#6-1-实体完整性" class="headerlink" title="6.1 实体完整性"></a>6.1 实体完整性</h4><ul>
+<li>关系的主码中的属性值不能为空值；</li>
+<li>意义：关系中的元组对应到现实世界相互之间可区分的一个个个体，这些个体是通过主码来唯一标识的；若主码为空，则出现不可标识的个体，这是不容许的。</li>
+</ul>
+<h4 id="6-2-参照完整性"><a href="#6-2-参照完整性" class="headerlink" title="6.2 参照完整性"></a>6.2 参照完整性</h4><ul>
+<li>如果关系R1的外码Fk与关系R2的主码Pk相对应，则R1中的每一个元组的Fk值或者等于R2 中某个元组的Pk 值，或者为空值</li>
+<li>意义：如果关系R1的某个元组t1参照了关系R2的某个元组t2，则t2必须存在</li>
+</ul>
+<h4 id="6-3-用户自定义完整性"><a href="#6-3-用户自定义完整性" class="headerlink" title="6.3 用户自定义完整性"></a>6.3 用户自定义完整性</h4><ul>
+<li>用户针对具体的应用环境定义的完整性约束条件</li>
+</ul>
+<h4 id="6-4-DBMS对关系完整性的支持"><a href="#6-4-DBMS对关系完整性的支持" class="headerlink" title="6.4 DBMS对关系完整性的支持"></a>6.4 DBMS对关系完整性的支持</h4><ul>
+<li>实体完整性和参照完整性由DBMS系统自动支持</li>
+<li>DBMS系统通常提供了如下机制：<ol>
+<li>它使用户可以自行定义有关的完整性约束条件</li>
+<li>当有更新操作发生时，DBMS将自动按照完整性约束条件检验更新操作的正确性，即是否符合用户自定义的完整性</li>
+</ol>
+</li>
+</ul>
+<p><span id="id7"><span></p>
+<h3 id="7-关系代数"><a href="#7-关系代数" class="headerlink" title="7. 关系代数"></a>7. 关系代数</h3><h4 id="7-1-关系代数的特点"><a href="#7-1-关系代数的特点" class="headerlink" title="7.1 关系代数的特点"></a>7.1 关系代数的特点</h4><ul>
+<li>基于集合，提供了一系列的关系代数操作：并、差、笛卡尔积(广义积)、选择、投影和更名等基本操作</li>
+<li>以及交、 连接和关系除等扩展操作，是一种集合思维的操作语言。</li>
+<li>关系代数操作以一个或多个关系为输入，结果是一个新的关系。</li>
+<li>用对关系的运算来表达查询，需要指明所用操作, 具有一定的过程性。</li>
+<li>是一种抽象的语言，是学习其他数据库语言，如SQL等的基础</li>
+</ul>
+<h4 id="7-2-关系代数的约束"><a href="#7-2-关系代数的约束" class="headerlink" title="7.2 关系代数的约束"></a>7.2 关系代数的约束</h4><p>某些关系代数操作，如并、差、交等，需满足”并相容性”</p>
+<ul>
+<li>并相容性：<ol>
+<li>参与运算的两个关系及其相关属性之间有一定的对应性、可比性或意义关联性</li>
+<li>定义：关系R与关系S存在相容性，当且仅当：</li>
+</ol>
+<ul>
+<li>(1) 关系R和关系S的属性数目必须相同；</li>
+<li>(2) 对于任意i，关系R的第i个属性的域必须和关系S的第i个属性的域相同</li>
+</ul>
+<ul>
+<li>示例：关系R：STUDENT(SID <strong>char(10)</strong>, Sname <strong>char(8)</strong>, Age <strong>char(3)</strong>)</li>
+<li>示例：关系S：TEACHER(TID <strong>char(10)</strong>, Tname <strong>char(8)</strong>, Age <strong>char(3)</strong>)</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-3-关系代数的基本操作"><a href="#7-3-关系代数的基本操作" class="headerlink" title="7.3 关系代数的基本操作"></a>7.3 关系代数的基本操作</h4><ol>
+<li>集合操作</li>
+</ol>
+<ul>
+<li>并（UNIO）：R∪S</li>
+<li>交（INTERSECTION）：R∩S</li>
+<li>差（DIFFERENCE）：R-S</li>
+<li>笛卡儿积（Cartesian PRODUCT）：R×S</li>
+</ul>
+<ol start="2">
+<li>纯关系操作</li>
+</ol>
+<ul>
+<li>选择（SELECT）：σF(R)</li>
+<li>投影（PROJECT）：ΠA(R)</li>
+<li>连接（JOIN）：R⋈S</li>
+<li>除（DIVISION）：R÷S</li>
+</ul>
+<h5 id="7-3-1-并-Union-操作"><a href="#7-3-1-并-Union-操作" class="headerlink" title="7.3.1 并(Union) 操作"></a>7.3.1 并(Union) 操作</h5><ul>
+<li>定义：设关系R和关系S是并相容的，则关系R与关系S的并运算结果也是一个关系，记作：**<code>R∪S</code>**, 它由 或者出现在关系R中，或者出现在S中的元组构成。</li>
+<li>数学描述：<code>R∪S=&#123;t|t∈R∨t∈S&#125;</code>，其中t是元组</li>
+<li>并运算是将两个关系的元组合并成一个关系，在合并时去掉重复的元组。</li>
+<li>汉语中的“或者…或者…”通常意义是并运算的要求。</li>
+<li><code>R∪S</code> 与 <code>S∪R</code> 运算的结果是<strong>同</strong>一个关系</li>
+</ul>
+<h5 id="7-3-2-差-Difference-操作"><a href="#7-3-2-差-Difference-操作" class="headerlink" title="7.3.2 差(Difference) 操作"></a>7.3.2 差(Difference) 操作</h5><ul>
+<li>定义：设关系R 和关系S是并相容的，则关系R与关系S的差运算结果也是一个关系，记作：**<code>R-S</code>**, 它由出现在关系R中但不出现在关系S中的元组构成。</li>
+<li>数学描述：<code>R－S=&#123;t|t∈R∧t∉S&#125;</code>，其中t是元组</li>
+<li>汉语中的“是…但不含…”通常意义是差运算的要求。</li>
+<li><code>R-S</code> 与 <code>S-R</code> 是<strong>不同</strong>的</li>
+</ul>
+<h5 id="7-3-3-交（Intersection-Referential-integrity）-操作"><a href="#7-3-3-交（Intersection-Referential-integrity）-操作" class="headerlink" title="7.3.3  交（Intersection Referential integrity） 操作"></a>7.3.3  交（Intersection Referential integrity） 操作</h5><ul>
+<li>定义：设关系R和关系S具有相同的目n，且相应的属性取自同一个域，则关系R与关系S的交由既属于R又属于S的元组组成。其结果关系仍为n目关系。</li>
+<li>数学描述：<code>R∩S=&#123;t|t∈R∧t∈S&#125;</code>，其中t是元组</li>
+</ul>
+<h5 id="7-3-4-广义笛卡尔积-Extended-cartesian-product-操作"><a href="#7-3-4-广义笛卡尔积-Extended-cartesian-product-操作" class="headerlink" title="7.3.4 广义笛卡尔积(Extended cartesian product) 操作"></a>7.3.4 广义笛卡尔积(Extended cartesian product) 操作</h5><ul>
+<li>定义：关系<code>R(&lt;a1,a2, …,an&gt;)</code>与关系<code>S(&lt;b1,b2, …,bm &gt;)</code>的广义笛卡尔积(简称广义积,或 积 或笛卡尔积)运算结果也是一个关系，记作：**<code>RxS</code>**；两个分别为n目和m目的关系R和S的广义笛卡尔积是一个(n+m)列的元组的集合，元组的前n列是关系R的一个元组，后m列是关系S的一个元组，若R有k1个元组，S有k2个元组，则关系R和关系S的广义笛卡尔积有k1×k2个元组。</li>
+<li>数学描述：<code>RxS = &#123;&lt;a1,a2,…,an,b1,b2,…,bm&gt;|&lt;a1,a2,…,an&gt;∈R ∧ &lt;b1,b2,…,bm&gt;∈S&#125;</code></li>
+<li><code>RxS=SxR</code>：RxS为R中的每一个元组都和S中的所有元组进行串接。<code>SxR</code>为S中的每一个元组都和R中的所有元组进行串接。结果是相同的。</li>
+<li>两个关系R和S，它们的<strong>属性个数</strong>分别为n和m(R是n度关系，S是m度关系)则笛卡尔积R×S的属性个数=n+m。即元组的前n个分量是R中元组的分量，后m个分量是S中元组的分量(R×S是n+m度关系).</li>
+<li>两个关系R和S，它们的<strong>元组个数</strong>分别为x和y(关系R的基数x,S的基数y),则笛卡尔积R×S的元组个数=x×y。(R×S的基数是x×y).</li>
+</ul>
+<h5 id="7-3-5-选择-Select"><a href="#7-3-5-选择-Select" class="headerlink" title="7.3.5 选择(Select)"></a>7.3.5 选择(Select)</h5><ul>
+<li>定义：给定一个关系R, 同时给定一个选择的条件condition(简记F), 选择运算结果也是一个关系，记作**<code>σF(R)</code>**, 它从关系R中选择出满足给定条件condition的元组构成。</li>
+<li>数学描述：<code>σF(R) = &#123;t|t∈R ∧ F(t)=&#39;真&#39;&#125;</code>,其中F表示选择条件，它是一个逻辑表达式，取逻辑值‘真’或‘假’。</li>
+<li>选择操作从给定的关系中选出满足条件的行,条件的书写很重要，尤其是当不同运算符在一起时，要注意运算符的优先次序，优先次序自高至低为{ <code>括弧()；θ；¬；∧；∨</code> }</li>
+</ul>
+<h5 id="7-3-6-投影-Project"><a href="#7-3-6-投影-Project" class="headerlink" title="7.3.6 投影(Project)"></a>7.3.6 投影(Project)</h5><ul>
+<li>定义：给定一个关系R, 投影运算结果也是一个关系，记作**<code>A(R)</code>**, 它从关系R中选出属性包含在A中的列构成。</li>
+<li>数学描述：<code>ΠA(R) = &#123;t[A] | t∈R&#125;</code>,其中A为R中的属性列</li>
+<li>投影操作从给定关系中选出某些列组成新的关系, 而选择操作是从给定关系中选出某些行组成新的关系</li>
+</ul>
+<h4 id="7-4-关系代数的扩展操作"><a href="#7-4-关系代数的扩展操作" class="headerlink" title="7.4 关系代数的扩展操作"></a>7.4 关系代数的扩展操作</h4><h5 id="7-4-1-交-Intersection"><a href="#7-4-1-交-Intersection" class="headerlink" title="7.4.1 交(Intersection)"></a>7.4.1 交(Intersection)</h5><ul>
+<li><strong>定义</strong>：假设关系R和关系S是并相容的，则关系R与关系S的交运算结果也是一个关系，记作：**<code>R∩S</code>**, 它由同时出现在关系R和关系S中的元组构成。</li>
+<li>数学描述：<code>R∩S = &#123;t|t∈R ∧ t∈S&#125;</code>，其中t是元组</li>
+<li>R∩S 和 S∩R 运算的结果是同一个关系</li>
+<li>交运算可以通过差运算来实现：<code>R∩S = R-(R-S) = S-(S-R)</code></li>
+<li>汉语中的“既…又…”，“…, 并且…”通常意义是交运算的要求</li>
+</ul>
+<h5 id="7-4-2-θ-连接-θ-Join-theta-Join"><a href="#7-4-2-θ-连接-θ-Join-theta-Join" class="headerlink" title="7.4.2 θ-连接(θ-Join, theta-Join)"></a>7.4.2 θ-连接(θ-Join, theta-Join)</h5><ul>
+<li>投影与选择操作只是对单个关系(表)进行操作, 而实际应用中往往涉及多个表之间的操作, 这就需要θ-连接操作</li>
+<li><strong>定义</strong>：给定关系R和关系S, R与S的连接运算结果也是一个关系，记作 **<code>R⋈S[AθB]</code>**：(括号内AθB是⋈的下标)，它由关系R和关系S的笛卡尔积中, 选取R中属性A与S中属性B之间满足 θ 条件的元组构成。</li>
+<li>数学描述：<code>R⋈S[AθB] = σ t[A]θs[B] (R×S)</code>，σF(RxS)其中t是R中的元组，s是S中的元组</li>
+<li>在实际应用中，θ-连接操作经常与投影Π、选择σ操作一起使用</li>
+<li><strong>特别注意</strong>：当引入θ-连接操作后，DBMS可直接进行连接操作，而不必先形成笛卡尔积。</li>
+</ul>
+<h5 id="7-4-3-等值连接-Equi-Join"><a href="#7-4-3-等值连接-Equi-Join" class="headerlink" title="7.4.3 等值连接(Equi-Join)"></a>7.4.3 等值连接(Equi-Join)</h5><ul>
+<li><strong>定义</strong>：给定关系R和关系S, R与S的等值连接运算结果也是一个关系，记作**<code>R⋈S[A=B]</code>**：(括号内A=B是⋈的下标)，它由关系R和关系S的笛卡尔积中选取R中属性A与S中属性B上值相等的元组所构成。</li>
+<li>数学描述：<code>R⋈S[A=B] = σ t[A]=s[B] (R×S)</code></li>
+<li>当θ-连接中运算符为“＝”时，就是等值连接，等值连接是θ-连接的一个特例；</li>
+<li>广义积的元组组合并不是都有意义的，另广义积的元组组合数目也非常庞大，因此采用<strong>θ-连接/等值连接</strong>运算可大幅度降低中间结果的保存量，提高速度。</li>
+</ul>
+<h5 id="7-4-4-自然连接-Natural-Join"><a href="#7-4-4-自然连接-Natural-Join" class="headerlink" title="7.4.4 自然连接(Natural-Join)"></a>7.4.4 自然连接(Natural-Join)</h5><ul>
+<li>定义：给定关系R和关系S, R与S的自然连接运算结果也是一个关系，记作 ，它由关系R和关系S的笛卡尔积中选取相同属性组B上值相等的元组所构成。</li>
+<li>数学描述：<code>R⋈S = σ t[B]=s[B] (R×S)</code></li>
+<li>自然连接是一种特殊的等值连接，要求关系R和关系S必须有相同的属性组B，R, S属性相同，值必须相等才能连接，要在结果中去掉重复的属性列</li>
+</ul>
+<h4 id="7-5-关系代数的基本书写思路"><a href="#7-5-关系代数的基本书写思路" class="headerlink" title="7.5 关系代数的基本书写思路"></a>7.5 关系代数的基本书写思路</h4><ol>
+<li>选出将用到的关系/表</li>
+<li>做”积”运算（可用连接运算替换）</li>
+<li>做选择运算保留所需的行/元组</li>
+<li>做投影运算保留所需的列/属性</li>
+</ol>
+<ul>
+<li>基本思路： 检索是否涉及多个表，如不涉及，则可直接采用并、差、交、选择与投影，只要注意条件书写正确与否即可</li>
+<li>如涉及多个表，则检查：<ul>
+<li>能否使用自然连接，将多个表连接起来(多数情况是这样的)</li>
+<li>如不能，能否使用等值或不等值连接(θ-连接)</li>
+<li>还不能，则使用广义笛卡尔积，注意相关条件的书写</li>
+</ul>
+</li>
+<li>连接完后，可以继续使用选择、投影等运算，即所谓数据库的“选投联”操作</li>
+</ul>
+<h4 id="7-6-关系代数之复杂扩展操作"><a href="#7-6-关系代数之复杂扩展操作" class="headerlink" title="7.6 关系代数之复杂扩展操作"></a>7.6 关系代数之复杂扩展操作</h4><h5 id="7-6-1-除-Division"><a href="#7-6-1-除-Division" class="headerlink" title="7.6.1 除(Division)"></a>7.6.1 除(Division)</h5><ul>
+<li>除法运算经常用于求解“查询… 全部的/所有的…”问题</li>
+<li>前提条件：给定关系R(A1 ,A2 , … ,An)为n度关系，关系S(B1 ,B2 , … ,Bm)为m度关系 。如果可以进行关系R与关系S的除运算，当且仅当：属性集{ B1 ,B2 , … , Bm }是属性集{ A1 ,A2 , … ,An }的真子集，即m &lt; n。</li>
+<li>定义：关系R 和关系S的除运算结果也是一个关系，记作R÷S，分两部分来定义。</li>
+<li>数学描述：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">R÷S = &#123;t|t∈Π[R-S](R) ∧ ∀u∈S(tu∈R) &#125;</span><br><span class="line">    = Π[R-S](R) - Π[R-S]((Π[R-S](R)×S)-R)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>其中[R-S]为投影Π的下标(属性)</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="7-6-2-外连接-Outer-Join"><a href="#7-6-2-外连接-Outer-Join" class="headerlink" title="7.6.2 外连接(Outer-Join)"></a>7.6.2 外连接(Outer-Join)</h5><ul>
+<li>定义：两个关系R与S进行连接时，如果关系R(或S)中的元组在S(或R)中找不到相匹配的元组，则为了避免该元组信息丢失，从而将该元组与S(或R)中假定存在的全为空值的元组形成连接，放置在结果关系中，这种连接称之为外连接(Outer Join)。</li>
+<li>外连接 = 自然连接 (或θ连接) + 失配的元组(与全空元组形成的连接)</li>
+<li>外连接的形式：左外连接、右外连接、全外连接<ul>
+<li>左外连接 = 自然连接(或连接) + 左侧表中失配的元组</li>
+<li>右外连接 = 自然连接(或连接) + 右侧表中失配的元组</li>
+<li>全外连接 = 自然连接(或连接) + 两侧表中失配的元组</li>
+<li>左外连接(Left Outer Join)记为：⋊</li>
+<li>右外连接(Right Outer Join)记为：⋉</li>
+<li>全外连接(Full Outer Join)记为：⋊⋉</li>
+</ul>
+</li>
+</ul>
+<p><span id="id8"><span></p>
+<h3 id="8-关系演算"><a href="#8-关系演算" class="headerlink" title="8. 关系演算"></a>8. 关系演算</h3><p>关系演算是<strong>描述关系运算</strong>的另一种思维方式，它是以数理逻辑中的谓词演算为基础的，SQL语言是继承了关系代数和关系演算各自的优点所形成的</p>
+<ul>
+<li>按照谓词变量的不同，可分为关系元组演算和关系域演算<ol>
+<li>关系元组演算是以<strong>元组变量</strong>作为谓词变量的基本对象</li>
+<li>关系域演算是以<strong>域变量</strong>作为谓词变量的基本对象</li>
+</ol>
+</li>
+</ul>
+<h4 id="8-1-关系元组演算"><a href="#8-1-关系元组演算" class="headerlink" title="8.1 关系元组演算"></a>8.1 关系元组演算</h4><ol>
+<li>关系元组演算公式：{ t | P(t) }</li>
+</ol>
+<ul>
+<li>表示：所有使谓词 P 为真的元组 t 的集合</li>
+<li>t 是元组变量</li>
+<li>t ∈ r 表示元组 t 在关系 r 中</li>
+<li>t[A] 表示元组 t 的分量，即 t 在属性 A 上的值</li>
+<li>P是与谓词逻辑相似的公式, P(t)表示以元组 t 为变量的公式</li>
+</ul>
+<ol start="2">
+<li>关系元组演算公式的基本形式：{ t | P(t) }</li>
+<li>P(t)可以是如下三种形式之一的原子公式：</li>
+</ol>
+<ul>
+<li>t∈R：t 是关系 R 中的一个元组，例如： { t | t∈Student}</li>
+<li>s[A] θ c：元组分量s[A]与常量 c 之间满足比较关系θ，θ:比较运算符&lt;,&lt;=,=,&lt;&gt;,&gt;,&gt;=</li>
+<li>s[A] θ u[B]：s[A] 与 u[B] 为元组分量，A和B分别是某些关系的属性，他们之间满足比较关系θ，</li>
+</ul>
+<ol start="4">
+<li>P(t)可以由公式加运算符 ∧(与)、∨(或)、¬(非)递归地构造</li>
+</ol>
+<ul>
+<li>如果F是一个公式，则 ¬F 也是公式</li>
+<li>如果F1、F2是公式，则 F1∧F2, F1∨F2也是公式</li>
+</ul>
+<ol start="5">
+<li>P(t)运算符优先次序(括弧；θ；∃；∀；¬；∧；∨)示例</li>
+<li>构造P(t)还有两个运算符：∃(存在)、∀(任意)</li>
+</ol>
+<ul>
+<li>如果F是一个公式，则 ∃(t∈r)(F(t)) 也是公式</li>
+<li>如果F是一个公式，则 ∀(t∈r)(F(t)) 也是公式</li>
+<li>运算符∃和∀，又称为量词，前者称“<strong>存在量词</strong>”，后者称“<strong>全称量词</strong>”</li>
+<li>而被∃或∀限定的元组变量 t , 或者说，元组变量 t 前有存在量词或全称量词，则该变量被称为“<strong>约束变量</strong>”，否则被称为“<strong>自由变量</strong>”。</li>
+</ul>
+<ol start="7">
+<li>元组演算的等价性变换<ul>
+<li>符号<code>&lt;=&gt;</code>表示表示等价于,如：<code>¬(A&gt;B) &lt;=&gt; A&lt;=B  &lt;=&gt; A&lt;B∨A=B</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="8-2-关系域演算"><a href="#8-2-关系域演算" class="headerlink" title="8.2 关系域演算"></a>8.2 关系域演算</h4><ol>
+<li>关系域演算公式的基本形式：<code>&#123;&lt;x1,x2, …,xn&gt; | P(x1,x2, …,xn)&#125;</code>,其中 xi 代表域变量或常量, P为以xi为变量的公式。</li>
+<li>元组演算是以元组为变量，以元组为基本处理单位，先找到元组，然后再找到元组分量，进行谓词判断；</li>
+<li>域演算是以域变量为基本处理单位，先有域变量，然后再判断由这些域变量组成的元组是否存在或是否满足谓词判断。</li>
+<li>公式的运算符(∧(与)、∨(或)、¬(非)、∀(全称量词)和∃(存在量词))是相同的，只是其中的变量不同。</li>
+<li>元组演算和域演算可以等价互换。</li>
+</ol>
+<h5 id="8-2-1-基于关系域演算的QBE语言"><a href="#8-2-1-基于关系域演算的QBE语言" class="headerlink" title="8.2.1 基于关系域演算的QBE语言"></a>8.2.1 基于关系域演算的QBE语言</h5><p>QBE: Query By Example，1975年由M. M. Zloof提出，1978年在IBM370上实现，是一种高度非过程化的查询语言，特别适合于终端用户的使用。</p>
+<ol>
+<li>特点：操作独特，基于屏幕表格的查询语言，不用书写复杂的公式，只需将条件填在表格中即可</li>
+<li>QBE操作框架由四个部分构成<ul>
+<li>关系名区：用于书写欲待查询的关系名</li>
+<li>属性名区：用于显示对应关系名区关系的所有属性名</li>
+<li>操作命令区：用于书写查询操作的命令</li>
+<li>查询条件区：用于书写查询条件</li>
+</ul>
+</li>
+<li>QBE的操作命令<ul>
+<li>Print 或 P.   —- 显示输出操作</li>
+<li>Delete或D.   —- 删除操作</li>
+<li>Insert或I.     —- 插入操作</li>
+<li>Update或U. —- 更新操作</li>
+</ul>
+</li>
+<li>构造查询的几个要素 <ul>
+<li>示例元素: 即域变量， 一定要加下划线 </li>
+<li>示例元素是这个域中可能的一个值， 它不必是查询结果中的元素</li>
+<li>打印操作符P.: 指定查询结果所含属性列 </li>
+<li>查询条件: 不用加下划线</li>
+<li>可使用比较运算符＞， ≥，＜， ≤，＝和≠  其中＝可以省略</li>
+<li>排序要求 <ul>
+<li>升序排序(AO.)，降序排序（DO.）,多列排序，用‚AO(i).‛ 或‚DO(i).‛ 表示 ，其中i为排序的优先级， i值越小，优先级越高</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="8-3-安全性"><a href="#8-3-安全性" class="headerlink" title="8.3 安全性"></a>8.3 安全性</h4><p>关系运算的安全性：不产生无限关系和无穷验证的运算被称为是安全的</p>
+<ol>
+<li>关系代数是一种集合运算，是安全的<ul>
+<li>集合本身是有限的，有限元素集合的有限次运算仍旧是有限的。</li>
+</ul>
+</li>
+<li>关系演算不一定是安全的<ul>
+<li>如：{t|¬(R(t))}, {t R(t)∨t[2]&gt;3}可能表示无限关系</li>
+</ul>
+</li>
+<li>需要对关系演算施加约束条件，即任何公式都在一个集合范围内操作，而不是无限范围内操作，才能保证其安全性。</li>
+</ol>
+<h5 id="8-3-1-安全约束有限集合DOM"><a href="#8-3-1-安全约束有限集合DOM" class="headerlink" title="8.3.1 安全约束有限集合DOM"></a>8.3.1 安全约束有限集合DOM</h5><ol>
+<li>DOM(ψ)是一个有限集合，其中的每个符号要么是ψ中明显出现的符号，要么是出现在ψ中的某个关系R的某元组的分量。</li>
+<li>DOM主要用于约束ψ中一些谓词的计算范围，它不必是最小集合。</li>
+<li>安全元组演算表达式，满足三个条件：<ul>
+<li>只要t满足ψ，t的每个分量就是DOM(ψ)的一个成员。<ul>
+<li>{ t|ψ(t) }中t的取值只能是DOM中的值，有限的。</li>
+</ul>
+</li>
+<li>对于ψ中形如(∃u)(ω(u))的子表达式，若u满足ω,则u的每个分量都是DOM(ω)中的成员。<ul>
+<li>{ t|ψ(t) }中的每个(∃u)(ω(u))子表达式，只需要验证DOM中的元素是否有使ω(u)为真的元素。而对于DOM以外的元素，已经明确其都不满足ω(u)，无需验证。</li>
+</ul>
+</li>
+<li>对于ψ中形如(∀u)(ω(u))的子表达式，若u不满足ω,则u的每个分量都是DOM(ω)中的成员。<ul>
+<li>{ t|ψ(t) }中的每个(∀u)(ω(u))子表达式，只需要验证DOM中的元素是否有使ω(u)为假的元素。而对于DOM以外的元素，已经明确其都满足ω(u)，无需验证。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="8-4-关于三种关系运算的一些观点"><a href="#8-4-关于三种关系运算的一些观点" class="headerlink" title="8.4 关于三种关系运算的一些观点"></a>8.4 关于三种关系运算的一些观点</h4><ol>
+<li>关系运算有三种：关系代数、关系元组演算和关系域演算</li>
+<li>三种关系运算都是抽象的数学运算，体现了三种不同的思维<ul>
+<li>关系代数—以集合为对象的操作思维，由集合到集合的变换</li>
+<li>元组演算—以元组为对象的操作思维，取出关系的每一个元组进行验证，有一个元组变量则可能需要一个循环，多个元组变量则需要多个循环</li>
+<li>域演算—以域变量为对象的操作思维，取出域的每一个变量进行验证看其是否满足条件</li>
+</ul>
+</li>
+<li>三种运算之间是等价的<ul>
+<li>关系代数 与 安全的元组演算表达式 与 安全的域演算表达式 是等<br>价的。即一种形式的表达式可以被等价地转换为另一种形式</li>
+</ul>
+</li>
+<li>三种关系运算都可说是非过程性的<ul>
+<li>相比之下：域演算的非过程性最好，元组演算次之，关系代数最差</li>
+</ul>
+</li>
+<li>三种关系运算虽是抽象的，但却是衡量数据库语言完备性的基础<ul>
+<li>一个数据库语言如果能够等价地实现这三种关系运算的操作，则说该语言是完备的</li>
+<li>目前多数数据库语言都能够实现这三种运算的操作，在此基础上还增加了许多其他的操作，如赋值操作、聚集操作等</li>
+</ul>
+</li>
+<li>数据库语言可以基于这三种抽象运算来设计<ul>
+<li>用“键盘符号”来替换抽象的数学符号</li>
+<li>用易于理解的符号组合来表达抽象的数学符号</li>
+<li>例如：ISBL语言—基于关系代数的数据库语言</li>
+<li>再例如：Ingres系统的QUEL语言</li>
+</ul>
+</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">XDORG</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://xdorgs.github.io/2019/06/22/shu-ju-ku-shu-ju-ku-xi-tong-ji-chu/">https://xdorgs.github.io/2019/06/22/shu-ju-ku-shu-ju-ku-xi-tong-ji-chu/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">XDORG</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">后端开发</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">数据库</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/07/01/shu-ju-ku-shu-ju-ku-yu-yan-sql/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="【数据库】数据库语言SQL">
+                        
+                        <span class="card-title">【数据库】数据库语言SQL</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            SQL语言概述结构化查询语言(Structured Query Language)简称SQL，是一种特殊目的的编程语言，是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统。
+
+SQL语言是集DDL、DML和DCL
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-07-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">后端开发</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/04/11/za-tan-dui-kai-yuan-de-li-jie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="【杂谈】对开源的理解">
+                        
+                        <span class="card-title">【杂谈】对开源的理解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            什么是开源所谓的「开源」，原本指的是开放其设计让所有使用者自由修改的一项机制。
+在IT领域来说的话，字面意思就是开放源代码，开源软件的源代码任何人都可以审查、修改和增强。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-04-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%9D%82%E8%B0%88/" class="post-category">
+                                    杂谈
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9D%82%E8%B0%88/">
+                        <span class="chip bg-color">杂谈</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BC%80%E6%BA%90/">
+                        <span class="chip bg-color">开源</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 编程者联盟<br />'
+            + '文章作者: XDORG<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="247491"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2021</span>
+            
+            <a href="/about" target="_blank">XDORG 版权所有</a>
+            |&nbsp;Powered by&nbsp;<a href="https://xdorgs.github.io/" target="_blank">XDORG</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://beian.miit.gov.cn/" target="_blank">皖ICP备2021009792号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/xdorgs" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:ceph_xdorg@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+    <a href="https://www.zhihu.com/people/xuan-xuan-79-44-99" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/xuan-xuan-79-44-99" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
